@@ -5,15 +5,14 @@
 //  Created by Светлана Романенко on 27.02.2021.
 //
 
-import UIKit
+import Spring
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet var springAnimationView: SpringView!
+    @IBOutlet var parametersLabel: SpringLabel!
+    
+    @IBAction func runButton(_ sender: SpringButton) {
+        sender.updateAnimation(view: springAnimationView, label: parametersLabel)
     }
-
-
 }
-
